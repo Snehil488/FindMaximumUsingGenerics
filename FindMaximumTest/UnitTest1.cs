@@ -10,30 +10,30 @@ namespace FindMaximumTest
         [TestMethod]
         public void Maximum_Value_PassedAt_First_Parameter_Should_Return_Maximum_Value()
         {
-            int firstValue = 30, secondValue = 20, thirdValue = 10;
-            int expected = 30;
+            float firstValue = 30.5f, secondValue = 20.5f, thirdValue = 10.5f;
+            float expected = 30.5f;
             FindMaximum find = new FindMaximum();
-            int actual = find.MaximumIntegerNumber(firstValue, secondValue, thirdValue);
+            float actual = find.MaximumFloatNumber(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expected, actual);
         }
         //TC1.2
         [TestMethod]
         public void Maximum_Value_PassedAt_Second_Parameter_Should_Return_Maximum_Value()
         {
-            int firstValue = 20, secondValue = 30, thirdValue = 10;
-            int expected = 30;
+            float firstValue = 20.5f, secondValue = 30.5f, thirdValue = 10.5f;
+            float expected = 30.5f;
             FindMaximum find = new FindMaximum();
-            int actual = find.MaximumIntegerNumber(firstValue, secondValue, thirdValue);
+            float actual = find.MaximumFloatNumber(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expected, actual);
         }
         //TC1.3
         [TestMethod]
         public void Maximum_Value_PassedAt_Third_Parameter_Should_Return_Maximum_Value()
         {
-            int firstValue = 20, secondValue = 10, thirdValue = 30;
-            int expected = 30;
+            float firstValue = 20.5f, secondValue = 10.5f, thirdValue = 30.5f;
+            float expected = 30.5f;
             FindMaximum find = new FindMaximum();
-            int actual = find.MaximumIntegerNumber(firstValue, secondValue, thirdValue);
+            float actual = find.MaximumFloatNumber(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expected, actual);
         }
     }

@@ -7,7 +7,7 @@ namespace FindMaximumUsingGenerics
         static void Main(string[] args)
         {
             FindMaximum find = new FindMaximum();
-            Console.WriteLine(find.MaximumIntegerNumber(10, 20, 30));
+            Console.WriteLine(find.MaximumFloatNumber(10.5f, 20.5f, 30.5f));
         }
     }
 }
