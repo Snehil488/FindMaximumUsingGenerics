@@ -19,7 +19,13 @@ namespace FindMaximumUsingGenerics
         public dataType FindMaxValue()
         {
             dataType[] sortedArray = Sort(this.array);
+            PrintMax();
             return sortedArray[sortedArray.Length - 1];
+        }
+        public void PrintMax()
+        {
+            dataType[] sortedArray = Sort(this.array);            
+            Console.WriteLine(sortedArray[sortedArray.Length - 1]);
         }
     }
 }
