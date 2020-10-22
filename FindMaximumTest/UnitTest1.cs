@@ -6,34 +6,31 @@ namespace FindMaximumTest
     [TestClass]
     public class UnitTest1
     {
-        //TC1.1
         [TestMethod]
-        public void Maximum_Value_PassedAt_First_Parameter_Should_Return_Maximum_Value()
+        public void Passing_Integer_Array_Should_Return_Maximum_Value()
         {
-            string firstValue = "Carrot", secondValue = "Banana", thirdValue = "Apple";
-            string expected = "Carrot";
-            FindMaximum find = new FindMaximum();
-            string actual = find.MaximumStringNumber(firstValue, secondValue, thirdValue);
+            int[] intArray = { 10, 20, 30 };
+            int expected = 30;
+            FindMaximum<int> find = new FindMaximum<int>(intArray);
+            int actual = find.FindMaxValue();
             Assert.AreEqual(expected, actual);
         }
-        //TC1.2
         [TestMethod]
-        public void Maximum_Value_PassedAt_Second_Parameter_Should_Return_Maximum_Value()
+        public void Passing_float_Array_Should_Return_Maximum_Value()
         {
-            string firstValue = "Banana", secondValue = "Carrot", thirdValue = "Apple";
-            string expected = "Carrot";
-            FindMaximum find = new FindMaximum();
-            string actual = find.MaximumStringNumber(firstValue, secondValue, thirdValue);
+            float[] floatArray = { 10.5f, 20.5f, 30.5f };
+            float expected = 30.5f;
+            FindMaximum<float> find = new FindMaximum<float>(floatArray);
+            float actual = find.FindMaxValue();
             Assert.AreEqual(expected, actual);
         }
-        //TC1.3
         [TestMethod]
-        public void Maximum_Value_PassedAt_Third_Parameter_Should_Return_Maximum_Value()
+        public void Passing_string_Array_Should_Return_Maximum_Value()
         {
-            string firstValue = "Apple", secondValue = "Banana", thirdValue = "Carrot";
-            string expected = "Carrot";
-            FindMaximum find = new FindMaximum();
-            string actual = find.MaximumStringNumber(firstValue, secondValue, thirdValue);
+            string[] strArray = { "10", "20", "30" };
+            string expected = "30";
+            FindMaximum<string> find = new FindMaximum<string>(strArray);
+            string actual = find.FindMaxValue();
             Assert.AreEqual(expected, actual);
         }
     }
